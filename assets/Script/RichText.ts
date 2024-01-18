@@ -15,7 +15,8 @@
  *      “安\u徽省\0”——“徽省”会有下划线
  * （注意：删除线和下划线只能2选1）
  * \f-->设置字体，例如：
- *      “浙\fKaiTi\f江\0省”——“江”变楷体（常见字体:Arial、KaiTi、SimSun等）
+ *      “浙\fKaiti\f江\0省”——“江”变楷体。
+ *      常见字体: 宋体Simsun、黑体Simhei、楷体Kaiti、微软雅黑Yahei、仿宋Fangsong 等等……
  * \0-->恢复默认值，搭配\b、\c、\d、\u、\f使用
  * \i-->插入图片（仅限Atlas图集帧），例如：
  *      “海南\iGame/Hero\i省”——“海南”后面插入图集帧“Resource/Atlas/Game/Hero”
@@ -67,7 +68,7 @@ export default class RichText extends cc.Component {
         this.updateContent();
     }
     @property
-    private _fontName: string = 'Arial';
+    private _fontName: string = 'Simhei';
     @property({ displayName: CC_DEV && '字体名称' })
     private get fontName() { return this._fontName };
     private set fontName(value: string) {
